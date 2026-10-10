@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function ()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "ts_ls", "rust_analyzer", "asm_lsp", "clangd", "bashls" },
+                ensure_installed = { "lua_ls", "ts_ls", "rust_analyzer", "asm_lsp", "clangd", "bashls", "pyright" },
             })
         end
     },
@@ -27,6 +27,7 @@ return {
             vim.lsp.enable("asm_lsp")
             vim.lsp.enable("clangd")
             vim.lsp.enable("bashls")
+            vim.lsp.enable("pyright")
 
             vim.lsp.config("*", capabilities)
 
